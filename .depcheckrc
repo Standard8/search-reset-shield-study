@@ -1,5 +1,5 @@
 {
-  "ignore": ["addons-linter", "depcheck-ci", "jpm"],
+  "ignore": ["addons-linter", "depcheck-ci", "eslint-plugin-promise", "jpm"],
   "ignoreDirs": [
   ],
   "strict": false,
