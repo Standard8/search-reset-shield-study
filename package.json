@@ -41,6 +41,7 @@
     "lint:fixpack": "fixpack",
     "lint:nsp": "nsp check",
     "pretest": "npm-run-all lint:*",
+    "shield": "export JPM_FIREFOX_BINARY=${JPM_FIREFOX_BINARY:-firefoxdeveloperedition} && shield run .",
     "test": "export JPM_FIREFOX_BINARY=${JPM_FIREFOX_BINARY:-firefoxdeveloperedition} && jpm test --tbpl"
   },
   "title": "Search Reset Shield Study"
