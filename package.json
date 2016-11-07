@@ -1,0 +1,46 @@
+{
+  "name": "search-reset-shield-study",
+  "description": "Search Reset Shield Study",
+  "version": "0.1.1",
+  "author": "Mark Banner <standard8@mozilla.com>",
+  "bugs": {
+    "url": "https://github.com/standard8/search-reset-shield-study/issues"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "addons-linter": "0.15.9",
+    "depcheck-ci": "1.0.1",
+    "eslint": "3.9.1",
+    "fixpack": "2.3.1",
+    "jpm": "1.2.2",
+    "npm-run-all": "3.1.1",
+    "nsp": "2.6.2",
+    "shield-studies-addon-utils": "2.0.0",
+    "yamljs": "0.2.8"
+  },
+  "engines": {
+    "firefox": ">=49.0a1"
+  },
+  "homepage": "http://github.com/mozilla/search-reset-shield-study",
+  "keywords": [
+    "jetpack",
+    "shield-study"
+  ],
+  "license": "MPL-2.0",
+  "main": "lib/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/standard8/search-reset-shield-study"
+  },
+  "scripts": {
+    "lint": "npm-run-all lint:*",
+    "lint:addons-linter": "./scripts/addonLintTest search-reset-shield-study",
+    "lint:depcheck": "depcheck-ci  # use coverage to catch missing",
+    "lint:eslint": "eslint .",
+    "lint:fixpack": "fixpack",
+    "lint:nsp": "nsp check",
+    "pretest": "npm-run-all lint:*",
+    "test": "export JPM_FIREFOX_BINARY=${JPM_FIREFOX_BINARY:-firefoxdeveloperedition} && jpm test --tbpl"
+  },
+  "title": "Search Reset Shield Study"
+}
